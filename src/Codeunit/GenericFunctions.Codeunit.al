@@ -74,6 +74,22 @@ codeunit 80000 "Generic Functions"
         //txtCharsToKeep := 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\|!"£$€%&/()=?*^+-<>@àèéòìùÁÉÍÓÚÀÈÌÒÙ.-_,; ''';
         Result := DelChr(StringToProcess, '=', DelChr(StringToProcess, '=', txtCharsToKeep));
     end;
+
+    /// <summary>
+    /// GetRandomDigit.
+    /// </summary>
+    /// <returns>Return value of type Text.</returns>
+    procedure GetRandomDigit() Result: Text
+    var
+        RandomDigit: Text[50];
+    begin
+        RandomDigit := CreateGuid();
+        RandomDigit := DelChr(RandomDigit, '=', '{}-01');
+        RandomDigit := CopyStr(RandomDigit, 1, MaxStrLen(RandomDigit));
+        Result := RandomDigit;
+        exit(Result);
+    end;
+
     #endregion StringFunctions
 
     #region FieldManagement

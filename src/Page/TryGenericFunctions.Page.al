@@ -9,6 +9,9 @@ page 80000 "Try Generic Functions"
     UsageCategory = Tasks;
     SourceTable = "Company Information";
     SourceTableTemporary = true;
+#pragma warning disable AL0254 // TODO: - Temporary fields with limitated record
+    SourceTableView = sorting(Address);
+#pragma warning restore AL0254 // TODO: - Temporary fields with limitated record
 
     layout
     {
@@ -20,7 +23,7 @@ page 80000 "Try Generic Functions"
                 group(Dates)
                 {
                     Caption = 'Dates';
-                    field(Functions1; ArrayFunctions[1])
+                    field(Dates1; ArrayFunctions[1])
                     {
                         ApplicationArea = All;
                         ToolTip = 'Click to start the execution of the function';
@@ -38,7 +41,7 @@ page 80000 "Try Generic Functions"
                             Message(ResultLbl + GenericFunctions.FormatDateIntoTxt(ArrayOfVariants[1]));
                         end;
                     }
-                    field(Functions2; ArrayFunctions[2])
+                    field(Dates2; ArrayFunctions[2])
                     {
                         ApplicationArea = All;
                         ToolTip = 'Click to start the execution of the function';
@@ -56,7 +59,7 @@ page 80000 "Try Generic Functions"
                             Message(ResultLbl + Format(GenericFunctions.DiffInMonthBetween2Dates(ArrayOfVariants[1], ArrayOfVariants[2])));
                         end;
                     }
-                    field(Functions3; ArrayFunctions[3])
+                    field(Dates3; ArrayFunctions[3])
                     {
                         ApplicationArea = All;
                         ToolTip = 'Click to start the execution of the function';
@@ -80,7 +83,7 @@ page 80000 "Try Generic Functions"
                 group(String)
                 {
                     Caption = 'String';
-                    field(Functions4; ArrayFunctions[4])
+                    field(String1; ArrayFunctions[4])
                     {
                         ApplicationArea = All;
                         ShowCaption = false;
@@ -95,6 +98,17 @@ page 80000 "Try Generic Functions"
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
                             Message(ResultLbl + GenericFunctions.KeepOnlyAllowedChar(ArrayOfVariants[1], ArrayOfVariants[2]));
+                        end;
+                    }
+                    field(String2; ArrayFunctions[9])
+                    {
+                        ApplicationArea = All;
+                        ShowCaption = false;
+                        Editable = false;
+
+                        trigger OnDrillDown()
+                        begin
+                            Message(ResultLbl + GenericFunctions.GetRandomDigit());
                         end;
                     }
 
@@ -244,41 +258,55 @@ page 80000 "Try Generic Functions"
         Rec.Init();
         Rec."Primary Key" := '00001';
         Rec.Name := ArrayFunctions[1];
+        Rec.Address := '01-Dates';
         Rec.Insert();
 
         Rec.Init();
         Rec."Primary Key" := '00002';
         Rec.Name := ArrayFunctions[2];
+        Rec.Address := '01-Dates';
         Rec.Insert();
 
         Rec.Init();
         Rec."Primary Key" := '00003';
         Rec.Name := ArrayFunctions[3];
+        Rec.Address := '01-Dates';
         Rec.Insert();
 
         Rec.Init();
         Rec."Primary Key" := '00004';
         Rec.Name := ArrayFunctions[4];
+        Rec.Address := '02-String';
         Rec.Insert();
 
         Rec.Init();
         Rec."Primary Key" := '00005';
         Rec.Name := ArrayFunctions[5];
+        Rec.Address := '03-Fields';
         Rec.Insert();
 
         Rec.Init();
         Rec."Primary Key" := '00006';
         Rec.Name := ArrayFunctions[6];
+        Rec.Address := '04-Files';
         Rec.Insert();
 
         Rec.Init();
         Rec."Primary Key" := '00007';
         Rec.Name := ArrayFunctions[7];
+        Rec.Address := '04-Files';
         Rec.Insert();
 
         Rec.Init();
         Rec."Primary Key" := '00008';
         Rec.Name := ArrayFunctions[8];
+        Rec.Address := '04-Files';
+        Rec.Insert();
+
+        Rec.Init();
+        Rec."Primary Key" := '00009';
+        Rec.Name := ArrayFunctions[9];
+        Rec.Address := '02-String';
         Rec.Insert();
     end;
 
@@ -292,6 +320,7 @@ page 80000 "Try Generic Functions"
         SetAttachmentsTextLbl: Label 'SetAttachmentsText';
         ImportAttachmentsFromBase64Lbl: Label 'ImportAttachmentsFromBase64';
         ImportAttachmentsFromZip: Label 'ImportAttachmentsFromZip';
+        GetRandomDigitLbl: Label 'GetRandomDigit';
     begin
         ArrayFunctions[1] := FormatDateIntoTxtLbl;
         ArrayFunctions[2] := DiffInMonthBetween2DatesLbl;
@@ -301,6 +330,7 @@ page 80000 "Try Generic Functions"
         ArrayFunctions[6] := SetAttachmentsTextLbl;
         ArrayFunctions[7] := ImportAttachmentsFromBase64Lbl;
         ArrayFunctions[8] := ImportAttachmentsFromZip;
+        ArrayFunctions[9] := GetRandomDigitLbl;
     end;
 
     trigger OnOpenPage()
@@ -364,6 +394,12 @@ page 80000 "Try Generic Functions"
                     CurrFunctionDocPar := DocFunctionPar8;
                     CurrFunctionDocRet := '';
                 end;
+            ArrayFunctions[9]:
+                begin
+                    NoOfParameters := 0;
+                    CurrFunctionDocPar := '';
+                    CurrFunctionDocRet := DocFunctionRet7;
+                end;
         end;
     end;
 
@@ -391,5 +427,6 @@ page 80000 "Try Generic Functions"
         DocFunctionRet4: Label '"Result" --> Text';
         DocFunctionRet5: Label '"Result" --> Boolean';
         DocFunctionRet6: Label '"AttachmentsText" --> Text';
+        DocFunctionRet7: Label '"Result" --> Boolean';
         ResultLbl: Label 'Result:\';
 }

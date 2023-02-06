@@ -228,6 +228,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet6</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 237615554" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"Result" --&gt; Boolean</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet7</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 3691381949" size-unit="char" translate="yes" xml:space="preserve">
           <source>Result:\</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -273,6 +278,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ImportAttachmentsFromZip</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 2886261452" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GetRandomDigit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType GetRandomDigitLbl</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Functions</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -283,25 +293,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Dates - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3006321449 - Control 5716068 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3006321449 - Control 243067338 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Click to start the execution of the function</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Functions1 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Dates1 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3006321449 - Control 643412685 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3006321449 - Control 2624944783 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Click to start the execution of the function</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Functions2 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Dates2 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3006321449 - Control 1281109302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3006321449 - Control 3262641400 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Click to start the execution of the function</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Functions3 - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Dates3 - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3006321449 - Control 1281109302 - Method 1845446376 - NamedType 1327832897" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3006321449 - Control 3262641400 - Method 1845446376 - NamedType 1327832897" size-unit="char" translate="yes" xml:space="preserve">
           <source>\Go to sites https://www.epochconverter.com/ to see the result</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Functions3 - Method OnDrillDown - NamedType Text000Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Dates3 - Method OnDrillDown - NamedType Text000Lbl</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - Control 183296051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fields</source>

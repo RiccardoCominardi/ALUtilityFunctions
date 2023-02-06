@@ -13,3 +13,4 @@ SetAttachmentsText          | Export Standard attachment in Base64 String       
 ImportAttachmentsFromBase64 | Import in Standard attachment table a Base64 string of different files           | BC20W1
 GetUnixTimeStampText        | Return the Unix Stamp Value for current Date-Time                                | BC20W1
 ImportAttachmentsFromZip    | Import in Standard attachment table a file .zip                                  | BC20W1
+GetRandomDigit              | Return a random string                                                           | BC20W1
