@@ -111,7 +111,23 @@ page 80000 "Try Generic Functions"
                             Message(ResultLbl + GenericFunctions.GetRandomDigit());
                         end;
                     }
+                    field(String3; ArrayFunctions[10])
+                    {
+                        ApplicationArea = All;
+                        ShowCaption = false;
+                        Editable = false;
 
+                        trigger OnDrillDown()
+                        begin
+                            Clear(SetParameters);
+                            Clear(ArrayOfVariants);
+                            SetParameters.InitiParameters();
+                            SetParameters.SetParametersPage(3, VariableTypes::Text);
+                            SetParameters.RunModal();
+                            SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
+                            Message(ResultLbl + GenericFunctions.ReplaceString(ArrayOfVariants[1], ArrayOfVariants[2], ArrayOfVariants[3]));
+                        end;
+                    }
                 }
                 group("Fields")
                 {
@@ -308,6 +324,12 @@ page 80000 "Try Generic Functions"
         Rec.Name := ArrayFunctions[9];
         Rec.Address := '02-String';
         Rec.Insert();
+
+        Rec.Init();
+        Rec."Primary Key" := '00010';
+        Rec.Name := ArrayFunctions[10];
+        Rec.Address := '02-String';
+        Rec.Insert();
     end;
 
     local procedure InitFunctionsArray()
@@ -319,8 +341,9 @@ page 80000 "Try Generic Functions"
         CheckFilterFieldLbl: Label 'CheckFilterField';
         SetAttachmentsTextLbl: Label 'SetAttachmentsText';
         ImportAttachmentsFromBase64Lbl: Label 'ImportAttachmentsFromBase64';
-        ImportAttachmentsFromZip: Label 'ImportAttachmentsFromZip';
+        ImportAttachmentsFromZipLbl: Label 'ImportAttachmentsFromZip';
         GetRandomDigitLbl: Label 'GetRandomDigit';
+        ReplaceStringLbl: Label 'ReplaceString';
     begin
         ArrayFunctions[1] := FormatDateIntoTxtLbl;
         ArrayFunctions[2] := DiffInMonthBetween2DatesLbl;
@@ -329,8 +352,9 @@ page 80000 "Try Generic Functions"
         ArrayFunctions[5] := CheckFilterFieldLbl;
         ArrayFunctions[6] := SetAttachmentsTextLbl;
         ArrayFunctions[7] := ImportAttachmentsFromBase64Lbl;
-        ArrayFunctions[8] := ImportAttachmentsFromZip;
+        ArrayFunctions[8] := ImportAttachmentsFromZipLbl;
         ArrayFunctions[9] := GetRandomDigitLbl;
+        ArrayFunctions[10] := ReplaceStringLbl;
     end;
 
     trigger OnOpenPage()
@@ -398,7 +422,13 @@ page 80000 "Try Generic Functions"
                 begin
                     NoOfParameters := 0;
                     CurrFunctionDocPar := '';
-                    CurrFunctionDocRet := DocFunctionRet7;
+                    CurrFunctionDocRet := DocFunctionRet9;
+                end;
+            ArrayFunctions[10]:
+                begin
+                    NoOfParameters := 3;
+                    CurrFunctionDocPar := '';
+                    CurrFunctionDocRet := DocFunctionRet10;
                 end;
         end;
     end;
@@ -421,12 +451,14 @@ page 80000 "Try Generic Functions"
         DocFunctionPar6: Label '"PurchaseHeader" --> Fixed Purchase Order with code 104001';
         DocFunctionPar7: Label '"PurchaseHeader" --> Fixed Purchase Order with code 104001; "AttachmentsInBase64" --> Text; "ParFileName" --> Text ;"FileType" --> Text';
         DocFunctionPar8: Label 'The filename inside the zip must have the same name as an existing customer inside Business Central';
+        DocFunctionPar10: Label '"String" --> Text[250]; "FindWhat" --> Text; "ReplaceWith" --> Text';
         DocFunctionRet1: Label '"DateTxt" --> Text';
         DocFunctionRet2: Label '"NumberOfMonth" --> Integer';
         DocFunctionRet3: Label '"Result" --> Text';
         DocFunctionRet4: Label '"Result" --> Text';
         DocFunctionRet5: Label '"Result" --> Boolean';
         DocFunctionRet6: Label '"AttachmentsText" --> Text';
-        DocFunctionRet7: Label '"Result" --> Boolean';
+        DocFunctionRet9: Label '"Result" --> Boolean';
+        DocFunctionRet10: Label '"NewString" --> Text[250]';
         ResultLbl: Label 'Result:\';
 }

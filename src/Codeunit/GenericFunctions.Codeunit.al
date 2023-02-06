@@ -90,6 +90,26 @@ codeunit 80000 "Generic Functions"
         exit(Result);
     end;
 
+    /// <summary>
+    /// ReplaceString.
+    /// </summary>
+    /// <param name="String">Text[250].</param>
+    /// <param name="FindWhat">Text[250].</param>
+    /// <param name="ReplaceWith">Text[250].</param>
+    /// <returns>Return variable NewString of type Text[250].</returns>
+    procedure ReplaceString(String: Text[250]; FindWhat: Text[250]; ReplaceWith: Text[250]) NewString: Text[250]
+    var
+        FindPos: Integer;
+    begin
+        FindPos := StrPos(String, FindWhat);
+        while FindPos > 0 do begin
+            NewString += DelStr(String, FindPos) + ReplaceWith;
+            String := CopyStr(String, FindPos + StrLen(FindWhat));
+            FindPos := StrPos(String, FindWhat);
+        end;
+        NewString += String;
+    end;
+
     #endregion StringFunctions
 
     #region FieldManagement

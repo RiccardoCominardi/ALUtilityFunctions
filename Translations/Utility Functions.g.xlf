@@ -163,6 +163,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar1</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 803666540" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"String" --&gt; Text[250]; "FindWhat" --&gt; Text; "ReplaceWith" --&gt; Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar10</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2354958781" size-unit="char" translate="yes" xml:space="preserve">
           <source>"FromDate" --&gt; Date; "ToDate" --&gt; Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -203,6 +208,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet1</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 397034412" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"NewString" --&gt; Text[250]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet10</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2150705405" size-unit="char" translate="yes" xml:space="preserve">
           <source>"NumberOfMonth" --&gt; Integer</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -228,10 +238,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet6</note>
         </trans-unit>
-        <trans-unit id="Page 3006321449 - NamedType 237615554" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3006321449 - NamedType 706403148" size-unit="char" translate="yes" xml:space="preserve">
           <source>"Result" --&gt; Boolean</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet7</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet9</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 3691381949" size-unit="char" translate="yes" xml:space="preserve">
           <source>Result:\</source>
@@ -273,15 +283,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ImportAttachmentsFromBase64Lbl</note>
         </trans-unit>
-        <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 3091011118" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 4287593876" size-unit="char" translate="yes" xml:space="preserve">
           <source>ImportAttachmentsFromZip</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ImportAttachmentsFromZip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ImportAttachmentsFromZipLbl</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 2886261452" size-unit="char" translate="yes" xml:space="preserve">
           <source>GetRandomDigit</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType GetRandomDigitLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 1057712805" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ReplaceString</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ReplaceStringLbl</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Functions</source>
