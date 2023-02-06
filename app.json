@@ -1,0 +1,38 @@
+{
+  "id": "47ddd990-f081-42e5-b505-c3f787809861",
+  "name": "Utility Functions",
+  "publisher": "Riccardo Cominardi",
+  "version": "20.0.0.0",
+  "brief": "Utility Functions",
+  "description": "Utility Functions",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "Images/logo-432.png",
+  "features": [
+    "TranslationFile"
+  ],
+  "supportedLocales": [
+    "en-US",
+    "it-IT"
+  ],
+  "dependencies": [
+  ],
+  "screenshots": [],
+  "platform": "20.0.0.0",
+  "application": "20.0.0.0",
+  "idRanges": [
+    {
+      "from": 80000,
+      "to": 81000
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "9.0",
+  "target": "Cloud"
+}

@@ -1,0 +1,15 @@
+# ALUtilityFunctions
+Repository that contains useful AL codes
+
+List of functions
+
+Name                        | Description                                                                      |Tested In Version
+---------------------------------------------------------------------------------------------------------------------------------
+FormatDateIntoTxt           | Put a date in a text variable with a custom format                               | BC20W1
+KeepOnlyAllowedChar         | Keep only a specific characters in a string                                      | BC20W1
+CheckFilterField            | Check if a field value is contained in an advanced filter                        | BC20W1
+DiffInMonthBetween2Dates    | Return the number of months between two dates                                    | BC20W1
+SetAttachmentsText          | Export Standard attachment in Base64 String                                      | BC20W1
+ImportAttachmentsFromBase64 | Import in Standard attachment table a Base64 string of different files           | BC20W1
+GetUnixTimeStampText        | Return the Unix Stamp Value for current Date-Time                                | BC20W1
+ImportAttachmentsFromZip    | Import in Standard attachment table a file .zip                                  | BC20W1
