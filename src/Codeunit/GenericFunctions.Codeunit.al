@@ -123,6 +123,29 @@ codeunit 80000 "Generic Functions"
             ReversedName += CopyStr(Name, i, 1);
     end;
 
+    /// <summary>
+    /// ReverseStrPos.
+    /// </summary>
+    /// <param name="String">Text.</param>
+    /// <param name="SubString">Text.</param>
+    /// <returns>Return variable Position of type Integer.</returns>
+    procedure ReverseStrPos(String: Text; SubString: Text) Position: Integer
+    var
+        CurrChar: Text;
+    begin
+        Position := 0;
+        while StrLen(String) > 0 do begin
+            CurrChar := CopyStr(String, StrLen(String));
+            if CurrChar = SubString then begin
+                Position := StrLen(String);
+                exit(Position);
+            end;
+
+            String := CopyStr(String, 1, StrLen(String) - 1);
+        end;
+
+        exit(Position);
+    end;
     #endregion StringFunctions
 
     #region FieldManagement

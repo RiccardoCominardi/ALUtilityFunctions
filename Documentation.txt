@@ -16,3 +16,4 @@ ImportAttachmentsFromZip    | Import in Standard attachment table a file .zip   
 GetRandomDigit              | Return a random string                                                           | BC20W1
 ReplaceString               | Replace a part of the string with another                                        | BC20W1
 ReverseString               | Get the reverse string of a string                                               | BC20W1
+ReverseStrPos               | Get last position of a char in a string                                          | BC20W1

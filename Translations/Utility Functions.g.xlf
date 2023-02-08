@@ -173,6 +173,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar11</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 2079059774" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"String" --&gt; Text; "SubString" --&gt; Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar12</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2354958781" size-unit="char" translate="yes" xml:space="preserve">
           <source>"FromDate" --&gt; Date; "ToDate" --&gt; Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -222,6 +227,11 @@
           <source>"ReversedName" --&gt; Text[100]</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet11</note>
+        </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 1672427646" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"Position" --&gt; Integer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet12</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2150705405" size-unit="char" translate="yes" xml:space="preserve">
           <source>"NumberOfMonth" --&gt; Integer</source>
@@ -312,6 +322,11 @@
           <source>ReverseString</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ReverseStringLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 1317714277" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ReverseStrPos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ReverseStrPosLbl</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Functions</source>

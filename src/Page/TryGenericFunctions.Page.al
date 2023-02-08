@@ -145,6 +145,23 @@ page 80000 "Try Generic Functions"
                             Message(ResultLbl + GenericFunctions.ReverseString(ArrayOfVariants[1]));
                         end;
                     }
+                    field(String5; ArrayFunctions[12])
+                    {
+                        ApplicationArea = All;
+                        ShowCaption = false;
+                        Editable = false;
+
+                        trigger OnDrillDown()
+                        begin
+                            Clear(SetParameters);
+                            Clear(ArrayOfVariants);
+                            SetParameters.InitiParameters();
+                            SetParameters.SetParametersPage(2, VariableTypes::Text);
+                            SetParameters.RunModal();
+                            SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
+                            Message(ResultLbl + Format(GenericFunctions.ReverseStrPos(ArrayOfVariants[1], ArrayOfVariants[2])));
+                        end;
+                    }
                 }
                 group("Fields")
                 {
@@ -248,9 +265,6 @@ page 80000 "Try Generic Functions"
 
                         trigger OnDrillDown()
                         begin
-                            Clear(SetParameters);
-                            Clear(ArrayOfVariants);
-
                             GenericFunctions.ImportAttachmentsFromZip();
                         end;
                     }
@@ -353,6 +367,12 @@ page 80000 "Try Generic Functions"
         Rec.Name := ArrayFunctions[11];
         Rec.Address := '02-String';
         Rec.Insert();
+
+        Rec.Init();
+        Rec."Primary Key" := '00012';
+        Rec.Name := ArrayFunctions[12];
+        Rec.Address := '02-String';
+        Rec.Insert();
     end;
 
     local procedure InitFunctionsArray()
@@ -368,6 +388,7 @@ page 80000 "Try Generic Functions"
         GetRandomDigitLbl: Label 'GetRandomDigit';
         ReplaceStringLbl: Label 'ReplaceString';
         ReverseStringLbl: Label 'ReverseString';
+        ReverseStrPosLbl: Label 'ReverseStrPos';
     begin
         ArrayFunctions[1] := FormatDateIntoTxtLbl;
         ArrayFunctions[2] := DiffInMonthBetween2DatesLbl;
@@ -380,6 +401,7 @@ page 80000 "Try Generic Functions"
         ArrayFunctions[9] := GetRandomDigitLbl;
         ArrayFunctions[10] := ReplaceStringLbl;
         ArrayFunctions[11] := ReverseStringLbl;
+        ArrayFunctions[12] := ReverseStrPosLbl;
     end;
 
     trigger OnOpenPage()
@@ -452,7 +474,7 @@ page 80000 "Try Generic Functions"
             ArrayFunctions[10]:
                 begin
                     NoOfParameters := 3;
-                    CurrFunctionDocPar := '';
+                    CurrFunctionDocPar := DocFunctionPar10;
                     CurrFunctionDocRet := DocFunctionRet10;
                 end;
             ArrayFunctions[11]:
@@ -460,6 +482,12 @@ page 80000 "Try Generic Functions"
                     NoOfParameters := 1;
                     CurrFunctionDocPar := DocFunctionPar11;
                     CurrFunctionDocRet := DocFunctionRet11;
+                end;
+            ArrayFunctions[12]:
+                begin
+                    NoOfParameters := 2;
+                    CurrFunctionDocPar := DocFunctionPar12;
+                    CurrFunctionDocRet := DocFunctionRet12;
                 end;
         end;
     end;
@@ -484,6 +512,7 @@ page 80000 "Try Generic Functions"
         DocFunctionPar8: Label 'The filename inside the zip must have the same name as an existing customer inside Business Central';
         DocFunctionPar10: Label '"String" --> Text[250]; "FindWhat" --> Text; "ReplaceWith" --> Text';
         DocFunctionPar11: Label '"Name" --> Text[100]';
+        DocFunctionPar12: Label '"String" --> Text; "SubString" --> Text';
         DocFunctionRet1: Label '"DateTxt" --> Text';
         DocFunctionRet2: Label '"NumberOfMonth" --> Integer';
         DocFunctionRet3: Label '"Result" --> Text';
@@ -493,5 +522,6 @@ page 80000 "Try Generic Functions"
         DocFunctionRet9: Label '"Result" --> Boolean';
         DocFunctionRet10: Label '"NewString" --> Text[250]';
         DocFunctionRet11: Label '"ReversedName" --> Text[100]';
+        DocFunctionRet12: Label '"Position" --> Integer';
         ResultLbl: Label 'Result:\';
 }
