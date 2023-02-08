@@ -110,6 +110,19 @@ codeunit 80000 "Generic Functions"
         NewString += String;
     end;
 
+    /// <summary>
+    /// ReverseString.
+    /// </summary>
+    /// <param name="Name">text[100].</param>
+    /// <returns>Return variable ReversedName of type Text[100].</returns>
+    procedure ReverseString(Name: text[100]) ReversedName: Text[100]
+    var
+        i: Integer;
+    begin
+        for i := StrLen(Name) downto 1 do
+            ReversedName += CopyStr(Name, i, 1);
+    end;
+
     #endregion StringFunctions
 
     #region FieldManagement

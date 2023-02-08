@@ -15,3 +15,4 @@ GetUnixTimeStampText        | Return the Unix Stamp Value for current Date-Time 
 ImportAttachmentsFromZip    | Import in Standard attachment table a file .zip                                  | BC20W1
 GetRandomDigit              | Return a random string                                                           | BC20W1
 ReplaceString               | Replace a part of the string with another                                        | BC20W1
+ReverseString               | Get the reverse string of a string                                               | BC20W1

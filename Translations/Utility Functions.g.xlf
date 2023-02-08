@@ -168,6 +168,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar10</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 165969923" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"Name" --&gt; Text[100]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar11</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2354958781" size-unit="char" translate="yes" xml:space="preserve">
           <source>"FromDate" --&gt; Date; "ToDate" --&gt; Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -212,6 +217,11 @@
           <source>"NewString" --&gt; Text[250]</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet10</note>
+        </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 4054305091" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"ReversedName" --&gt; Text[100]</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet11</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2150705405" size-unit="char" translate="yes" xml:space="preserve">
           <source>"NumberOfMonth" --&gt; Integer</source>
@@ -297,6 +307,11 @@
           <source>ReplaceString</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ReplaceStringLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 3448574193" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ReverseString</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ReverseStringLbl</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Functions</source>

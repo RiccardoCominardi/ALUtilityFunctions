@@ -128,6 +128,23 @@ page 80000 "Try Generic Functions"
                             Message(ResultLbl + GenericFunctions.ReplaceString(ArrayOfVariants[1], ArrayOfVariants[2], ArrayOfVariants[3]));
                         end;
                     }
+                    field(String4; ArrayFunctions[11])
+                    {
+                        ApplicationArea = All;
+                        ShowCaption = false;
+                        Editable = false;
+
+                        trigger OnDrillDown()
+                        begin
+                            Clear(SetParameters);
+                            Clear(ArrayOfVariants);
+                            SetParameters.InitiParameters();
+                            SetParameters.SetParametersPage(1, VariableTypes::Text);
+                            SetParameters.RunModal();
+                            SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
+                            Message(ResultLbl + GenericFunctions.ReverseString(ArrayOfVariants[1]));
+                        end;
+                    }
                 }
                 group("Fields")
                 {
@@ -330,6 +347,12 @@ page 80000 "Try Generic Functions"
         Rec.Name := ArrayFunctions[10];
         Rec.Address := '02-String';
         Rec.Insert();
+
+        Rec.Init();
+        Rec."Primary Key" := '00011';
+        Rec.Name := ArrayFunctions[11];
+        Rec.Address := '02-String';
+        Rec.Insert();
     end;
 
     local procedure InitFunctionsArray()
@@ -344,6 +367,7 @@ page 80000 "Try Generic Functions"
         ImportAttachmentsFromZipLbl: Label 'ImportAttachmentsFromZip';
         GetRandomDigitLbl: Label 'GetRandomDigit';
         ReplaceStringLbl: Label 'ReplaceString';
+        ReverseStringLbl: Label 'ReverseString';
     begin
         ArrayFunctions[1] := FormatDateIntoTxtLbl;
         ArrayFunctions[2] := DiffInMonthBetween2DatesLbl;
@@ -355,6 +379,7 @@ page 80000 "Try Generic Functions"
         ArrayFunctions[8] := ImportAttachmentsFromZipLbl;
         ArrayFunctions[9] := GetRandomDigitLbl;
         ArrayFunctions[10] := ReplaceStringLbl;
+        ArrayFunctions[11] := ReverseStringLbl;
     end;
 
     trigger OnOpenPage()
@@ -430,6 +455,12 @@ page 80000 "Try Generic Functions"
                     CurrFunctionDocPar := '';
                     CurrFunctionDocRet := DocFunctionRet10;
                 end;
+            ArrayFunctions[11]:
+                begin
+                    NoOfParameters := 1;
+                    CurrFunctionDocPar := DocFunctionPar11;
+                    CurrFunctionDocRet := DocFunctionRet11;
+                end;
         end;
     end;
 
@@ -452,6 +483,7 @@ page 80000 "Try Generic Functions"
         DocFunctionPar7: Label '"PurchaseHeader" --> Fixed Purchase Order with code 104001; "AttachmentsInBase64" --> Text; "ParFileName" --> Text ;"FileType" --> Text';
         DocFunctionPar8: Label 'The filename inside the zip must have the same name as an existing customer inside Business Central';
         DocFunctionPar10: Label '"String" --> Text[250]; "FindWhat" --> Text; "ReplaceWith" --> Text';
+        DocFunctionPar11: Label '"Name" --> Text[100]';
         DocFunctionRet1: Label '"DateTxt" --> Text';
         DocFunctionRet2: Label '"NumberOfMonth" --> Integer';
         DocFunctionRet3: Label '"Result" --> Text';
@@ -460,5 +492,6 @@ page 80000 "Try Generic Functions"
         DocFunctionRet6: Label '"AttachmentsText" --> Text';
         DocFunctionRet9: Label '"Result" --> Boolean';
         DocFunctionRet10: Label '"NewString" --> Text[250]';
+        DocFunctionRet11: Label '"ReversedName" --> Text[100]';
         ResultLbl: Label 'Result:\';
 }
