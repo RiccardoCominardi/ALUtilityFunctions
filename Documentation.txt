@@ -18,3 +18,4 @@ ReplaceString               | Replace a part of the string with another         
 ReverseString               | Get the reverse string of a string                                               | BC20W1
 ReverseStrPos               | Get last position of a char in a string                                          | BC20W1
 ExportExcel                 | Export in Excel any table                                                        | BC20W1
+StringToBarcode             | Convert a string into a differentr type of barcode                               | Works free only in Saas

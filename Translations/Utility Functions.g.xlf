@@ -3,6 +3,16 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Utility Functions">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 149480732 - Method 951961053 - NamedType 2156366782" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This environment is Saas</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method CheckEnvironment - NamedType SaasLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 149480732 - Method 951961053 - NamedType 2399819897" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This environment is not Saas</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method CheckEnvironment - NamedType NotSaasLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 149480732 - Method 2857238821 - NamedType 3417773150" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sheet1</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -188,6 +198,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar13</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 2547847368" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"BarcodeString" --&gt; Text; Fixed type of barcode: Code39</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar14</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2354958781" size-unit="char" translate="yes" xml:space="preserve">
           <source>"FromDate" --&gt; Date; "ToDate" --&gt; Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -242,6 +257,11 @@
           <source>"Position" --&gt; Integer</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet12</note>
+        </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 2141215240" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"EncodedText" --&gt; Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionRet14</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2150705405" size-unit="char" translate="yes" xml:space="preserve">
           <source>"NumberOfMonth" --&gt; Integer</source>
@@ -342,6 +362,11 @@
           <source>ExportExcel</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ExportExcelLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 2759432396" size-unit="char" translate="yes" xml:space="preserve">
+          <source>StringToBarcode</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType StringToBarcodeLbl</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Functions</source>

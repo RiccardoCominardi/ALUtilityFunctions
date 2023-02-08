@@ -533,7 +533,53 @@ codeunit 80000 "Generic Functions"
         */
     end;
 
+    /// <summary>
+    /// StringToBarcode.
+    /// </summary>
+    /// <param name="BarcodeString">Text.</param>
+    /// <returns>Return variable EncodedText of type Text.</returns>
+    procedure StringToBarcode(BarcodeString: Text) EncodedText: Text;
+    var
+        BarcodeSymbology: Enum "Barcode Symbology";
+        BarcodeFontProvider: Interface "Barcode Font Provider";
+    begin
+        // Declare the barcode provider using the barcode provider interface and enum
+        BarcodeFontProvider := Enum::"Barcode Font Provider"::IDAutomation1D;
+
+        // Declare the font using the barcode symbology enum
+        BarcodeSymbology := Enum::"Barcode Symbology"::"Code39";
+
+        // Set data string source or pass by parameter 
+        //BarcodeString := 'TEST';
+
+        // Validate the input. This method is not available for 2D provider
+        BarcodeFontProvider.ValidateInput(BarcodeString, BarcodeSymbology);
+
+        // Encode the data string to the barcode font
+        EncodedText := BarcodeFontProvider.EncodeFont(BarcodeString, BarcodeSymbology);
+    end;
+
     #endregion FileManagement
+
+    #region Environment
+    /// <summary>
+    /// CheckEnvironment.
+    /// </summary>
+    /// <returns>Return variable Result of type Text.</returns>
+    procedure CheckEnvironment() Result: Text;
+    var
+        EnvironmentInformation: Codeunit "Environment Information";
+        SaasLbl: Label 'This environment is Saas';
+        NotSaasLbl: Label 'This environment is not Saas';
+    begin
+        if EnvironmentInformation.IsSaaSInfrastructure() then
+            Result := SaasLbl
+        else
+            Result := NotSaasLbl;
+        exit(Result);
+    end;
+    #endregion Environment
+
     var
         myInt: Integer;
 }

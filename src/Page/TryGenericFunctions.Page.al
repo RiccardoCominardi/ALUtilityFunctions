@@ -286,6 +286,23 @@ page 80000 "Try Generic Functions"
                             GenericFunctions.ExportExcel(PurchaseHeader);
                         end;
                     }
+                    field(Files5; ArrayFunctions[14])
+                    {
+                        ApplicationArea = All;
+                        ShowCaption = false;
+                        Editable = false;
+                        Visible = IsSaasEnvironment;
+                        trigger OnDrillDown()
+                        begin
+                            Clear(SetParameters);
+                            Clear(ArrayOfVariants);
+                            SetParameters.InitiParameters();
+                            SetParameters.SetParametersPage(1, VariableTypes::Text);
+                            SetParameters.RunModal();
+                            SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
+                            Message(ResultLbl + Format(GenericFunctions.StringToBarcode(ArrayOfVariants[1])));
+                        end;
+                    }
                 }
             }
             repeater(FunctionsDoc)
@@ -397,6 +414,14 @@ page 80000 "Try Generic Functions"
         Rec.Name := ArrayFunctions[13];
         Rec.Address := '04-Files';
         Rec.Insert();
+
+        if IsSaasEnvironment then begin
+            Rec.Init();
+            Rec."Primary Key" := '00014';
+            Rec.Name := ArrayFunctions[14];
+            Rec.Address := '04-Files';
+            Rec.Insert();
+        end;
     end;
 
     local procedure InitFunctionsArray()
@@ -414,6 +439,7 @@ page 80000 "Try Generic Functions"
         ReverseStringLbl: Label 'ReverseString';
         ReverseStrPosLbl: Label 'ReverseStrPos';
         ExportExcelLbl: Label 'ExportExcel';
+        StringToBarcodeLbl: Label 'StringToBarcode';
     begin
         ArrayFunctions[1] := FormatDateIntoTxtLbl;
         ArrayFunctions[2] := DiffInMonthBetween2DatesLbl;
@@ -428,12 +454,17 @@ page 80000 "Try Generic Functions"
         ArrayFunctions[11] := ReverseStringLbl;
         ArrayFunctions[12] := ReverseStrPosLbl;
         ArrayFunctions[13] := ExportExcelLbl;
+        ArrayFunctions[14] := StringToBarcodeLbl;
     end;
 
     trigger OnOpenPage()
+    var
+        EnvironmentInformation: Codeunit "Environment Information";
     begin
         InitFunctionsArray();
         InitFunctionsDocumentation();
+
+        IsSaasEnvironment := EnvironmentInformation.IsSaaSInfrastructure();
     end;
 
     trigger OnAfterGetRecord()
@@ -521,6 +552,12 @@ page 80000 "Try Generic Functions"
                     CurrFunctionDocPar := DocFunctionPar13;
                     CurrFunctionDocRet := '';
                 end;
+            ArrayFunctions[14]:
+                begin
+                    NoOfParameters := 1;
+                    CurrFunctionDocPar := DocFunctionPar14;
+                    CurrFunctionDocRet := DocFunctionPar14;
+                end;
         end;
     end;
 
@@ -528,6 +565,7 @@ page 80000 "Try Generic Functions"
         GenericFunctions: Codeunit "Generic Functions";
         SetParameters: Page "Set Parameters";
         VariableTypes: Enum "Variable Types";
+        IsSaasEnvironment: Boolean;
         ArrayFunctions: array[100] of Text[100];
         ArrayOfVariants: array[5] of Variant;
         ArrayOfVariants2: array[5] of Variant;
@@ -546,6 +584,7 @@ page 80000 "Try Generic Functions"
         DocFunctionPar11: Label '"Name" --> Text[100]';
         DocFunctionPar12: Label '"String" --> Text; "SubString" --> Text';
         DocFunctionPar13: Label '"PurchaseHeader" --> Fixed Purchase Order with code 104001';
+        DocFunctionPar14: Label '"BarcodeString" --> Text; Fixed type of barcode: Code39';
         DocFunctionRet1: Label '"DateTxt" --> Text';
         DocFunctionRet2: Label '"NumberOfMonth" --> Integer';
         DocFunctionRet3: Label '"Result" --> Text';
@@ -556,5 +595,6 @@ page 80000 "Try Generic Functions"
         DocFunctionRet10: Label '"NewString" --> Text[250]';
         DocFunctionRet11: Label '"ReversedName" --> Text[100]';
         DocFunctionRet12: Label '"Position" --> Integer';
+        DocFunctionRet14: Label '"EncodedText" --> Text';
         ResultLbl: Label 'Result:\';
 }
