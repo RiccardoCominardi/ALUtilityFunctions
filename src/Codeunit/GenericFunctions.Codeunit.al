@@ -458,6 +458,81 @@ codeunit 80000 "Generic Functions"
       END;
     END;
     */
+
+    /// <summary>
+    /// ExportExcel.
+    /// </summary>
+    /// <param name="SourceRecord">Variant.</param>
+    procedure ExportExcel(SourceRecord: Variant)
+    var
+        TempExcelBuffer: Record "Excel Buffer" temporary;
+        Field: Record Field;
+        RecRef: RecordRef;
+        FldRef: FieldRef;
+        CurrRow: Integer;
+        SheetNameLbl: Label 'Sheet1';
+    //TempBlob: Codeunit "Temp Blob";
+    //FileManagement: Codeunit "File Management";
+    //OutStr: outstream;
+    //InStr: InStream;
+    begin
+        if not TempExcelBuffer.IsTemporary then
+            exit;
+
+        Clear(RecRef);
+        RecRef.GetTable(SourceRecord);
+        RecRef.SetRecFilter();
+
+        TempExcelBuffer.Reset();
+        TempExcelBuffer.DeleteAll();
+
+        TempExcelBuffer.CreateNewBook(SheetNameLbl);
+        //Insert a line with field name
+        Field.Reset();
+        Field.SetRange(TableNo, RecRef.Number);
+        if Field.FindSet() then
+            repeat
+                FldRef := RecRef.Field(Field."No.");
+                TempExcelBuffer.AddColumn(FldRef.Caption, false, '', true, false, false, '', TempExcelBuffer."Cell Type"::Text);
+            until Field.Next() = 0;
+
+        //Insert all details line with field value 
+        CurrRow := 1;
+        if RecRef.FindSet() then
+            repeat
+                CurrRow += 1;
+                TempExcelBuffer.SetCurrent(CurrRow, 0);
+                Field.Reset();
+                Field.SetRange(TableNo, RecRef.Number);
+                if Field.FindSet() then
+                    repeat
+                        FldRef := RecRef.Field(Field."No.");
+                        if Field.Class = Field.Class::FlowField then
+                            FldRef.CalcField();
+                        TempExcelBuffer.AddColumn(FldRef.Value, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                    until Field.Next() = 0;
+            until RecRef.Next() = 0;
+
+        //Download a file
+        TempExcelBuffer.WriteSheet('', CompanyName, UserId);
+        TempExcelBuffer.CloseBook();
+        TempExcelBuffer.SetFriendlyFilename(RecRef.Caption);
+        TempExcelBuffer.OpenExcel()
+
+        //Download a file in a setup folder
+        /*
+        if GuiAllowed then
+            TempExcelBuffer.OpenExcel()
+        else begin
+            TempBlob.CreateOutStream(OutStr);
+            TempExcelBuffer.SaveToStream(OutStr, false);
+            TempBlob.CreateInStream(InStr);
+            InventorySetup.TestField("FMIEOS Excel Export Path");
+            FileManagement.BLOBExportToServerFile(TempBlob, InventorySetup."FMIEOS Excel Export Path" + GetFileName(true));
+        end;
+        */
+    end;
+
     #endregion FileManagement
     var
         myInt: Integer;

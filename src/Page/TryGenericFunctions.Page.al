@@ -268,6 +268,24 @@ page 80000 "Try Generic Functions"
                             GenericFunctions.ImportAttachmentsFromZip();
                         end;
                     }
+                    field(Files4; ArrayFunctions[13])
+                    {
+                        ApplicationArea = All;
+                        ShowCaption = false;
+                        Editable = false;
+
+                        trigger OnDrillDown()
+                        var
+                            PurchaseHeader: Record "Purchase Header";
+                            Text000Lbl: Label 'Purchase Order 104001 not exist';
+                        begin
+                            if not PurchaseHeader.Get(PurchaseHeader."Document Type"::Order, '104001') then begin //Work in Cronus DB 
+                                Message(Text000Lbl);
+                                exit;
+                            end;
+                            GenericFunctions.ExportExcel(PurchaseHeader);
+                        end;
+                    }
                 }
             }
             repeater(FunctionsDoc)
@@ -373,6 +391,12 @@ page 80000 "Try Generic Functions"
         Rec.Name := ArrayFunctions[12];
         Rec.Address := '02-String';
         Rec.Insert();
+
+        Rec.Init();
+        Rec."Primary Key" := '00013';
+        Rec.Name := ArrayFunctions[13];
+        Rec.Address := '04-Files';
+        Rec.Insert();
     end;
 
     local procedure InitFunctionsArray()
@@ -389,6 +413,7 @@ page 80000 "Try Generic Functions"
         ReplaceStringLbl: Label 'ReplaceString';
         ReverseStringLbl: Label 'ReverseString';
         ReverseStrPosLbl: Label 'ReverseStrPos';
+        ExportExcelLbl: Label 'ExportExcel';
     begin
         ArrayFunctions[1] := FormatDateIntoTxtLbl;
         ArrayFunctions[2] := DiffInMonthBetween2DatesLbl;
@@ -402,6 +427,7 @@ page 80000 "Try Generic Functions"
         ArrayFunctions[10] := ReplaceStringLbl;
         ArrayFunctions[11] := ReverseStringLbl;
         ArrayFunctions[12] := ReverseStrPosLbl;
+        ArrayFunctions[13] := ExportExcelLbl;
     end;
 
     trigger OnOpenPage()
@@ -489,6 +515,12 @@ page 80000 "Try Generic Functions"
                     CurrFunctionDocPar := DocFunctionPar12;
                     CurrFunctionDocRet := DocFunctionRet12;
                 end;
+            ArrayFunctions[13]:
+                begin
+                    NoOfParameters := 1;
+                    CurrFunctionDocPar := DocFunctionPar13;
+                    CurrFunctionDocRet := '';
+                end;
         end;
     end;
 
@@ -513,6 +545,7 @@ page 80000 "Try Generic Functions"
         DocFunctionPar10: Label '"String" --> Text[250]; "FindWhat" --> Text; "ReplaceWith" --> Text';
         DocFunctionPar11: Label '"Name" --> Text[100]';
         DocFunctionPar12: Label '"String" --> Text; "SubString" --> Text';
+        DocFunctionPar13: Label '"PurchaseHeader" --> Fixed Purchase Order with code 104001';
         DocFunctionRet1: Label '"DateTxt" --> Text';
         DocFunctionRet2: Label '"NumberOfMonth" --> Integer';
         DocFunctionRet3: Label '"Result" --> Text';

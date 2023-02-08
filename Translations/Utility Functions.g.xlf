@@ -3,6 +3,11 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Utility Functions">
     <body>
       <group id="body">
+        <trans-unit id="Codeunit 149480732 - Method 2857238821 - NamedType 3417773150" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sheet1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method ExportExcel - NamedType SheetNameLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 149480732 - Method 3091011118 - NamedType 2182284056" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select ZIP File</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -178,6 +183,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar12</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - NamedType 1441363157" size-unit="char" translate="yes" xml:space="preserve">
+          <source>"PurchaseHeader" --&gt; Fixed Purchase Order with code 104001</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - NamedType DocFunctionPar13</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - NamedType 2354958781" size-unit="char" translate="yes" xml:space="preserve">
           <source>"FromDate" --&gt; Date; "ToDate" --&gt; Date</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -328,6 +338,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ReverseStrPosLbl</note>
         </trans-unit>
+        <trans-unit id="Page 3006321449 - Method 3382841022 - NamedType 2955234003" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ExportExcel</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Method InitFunctionsArray - NamedType ExportExcelLbl</note>
+        </trans-unit>
         <trans-unit id="Page 3006321449 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Functions</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -397,6 +412,11 @@
           <source>Go to the Purchase Order 104001 and take a look at the attachments factbox</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Files2 - Method OnDrillDown - NamedType Text001Lbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3006321449 - Control 2565358579 - Method 1845446376 - NamedType 1327832897" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Order 104001 not exist</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Generic Functions - Control Files4 - Method OnDrillDown - NamedType Text000Lbl</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - Control 1736694239 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>String</source>
