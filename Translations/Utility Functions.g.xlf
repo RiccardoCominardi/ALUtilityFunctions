@@ -43,130 +43,25 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Method SetParametersPage - NamedType Text001Err</note>
         </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 684242166 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Parameters</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Parameters - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3192193756 - Control 1826403361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dates</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Dates - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 2688099599 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>1° Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Date1 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 306222154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>2° Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Date2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 3963492833 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>3° Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Date3 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 1581615388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>4° Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Date4 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 943918771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>5° Date</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Date5 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3192193756 - Control 3832747598 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Date - Time</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control DateTimes - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 399476540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>1° DateTime</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control DateTime1 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 1037173157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>2° DateTime</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control DateTime2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 1674869774 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>3° DateTime</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control DateTime3 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 1505960751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>4° DateTime</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control DateTime4 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 2143657368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>5° DateTime</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control DateTime5 - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3192193756 - Control 2295892487 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Integer</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Integers - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 1413407897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>1° Integer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Integer1 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 775711280 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>2° Integer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Integer2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 138014663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>3° Integer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Integer3 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 306923686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>4° Integer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Integer4 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 3964194365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>5° Integer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Integer5 - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3192193756 - Control 1736694239 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>String</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control String - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 3721534664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>1° Text</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Text1 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 64263985 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>2° Text</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Text2 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 701960602 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>3° Text</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Text3 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 1339657219 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>4° Text</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Text4 - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3192193756 - Control 1977353836 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>5° Text</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Text5 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3006321449 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Try Generic Functions</source>

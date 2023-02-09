@@ -36,6 +36,8 @@ page 80000 "Try Generic Functions"
                             Clear(ArrayOfVariants);
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(1, VariableTypes::Date);
+                            SetParameters.SetCaption(VariableTypes::Date, 1, 'DateToFormat');
+                            SetParameters.Caption(ArrayFunctions[1]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Date);
                             Message(ResultLbl + GenericFunctions.FormatDateIntoTxt(ArrayOfVariants[1]));
@@ -54,6 +56,9 @@ page 80000 "Try Generic Functions"
                             Clear(ArrayOfVariants);
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(2, VariableTypes::Date);
+                            SetParameters.SetCaption(VariableTypes::Date, 1, 'FromDate');
+                            SetParameters.SetCaption(VariableTypes::Date, 2, 'ToDate');
+                            SetParameters.Caption(ArrayFunctions[2]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Date);
                             Message(ResultLbl + Format(GenericFunctions.DiffInMonthBetween2Dates(ArrayOfVariants[1], ArrayOfVariants[2])));
@@ -74,6 +79,8 @@ page 80000 "Try Generic Functions"
                             Clear(ArrayOfVariants);
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(1, VariableTypes::"Date-Time");
+                            SetParameters.SetCaption(VariableTypes::"Date-Time", 1, 'FromDateTime');
+                            SetParameters.Caption(ArrayFunctions[3]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::"Date-Time");
                             Message(ResultLbl + Format(GenericFunctions.GetUnixTimeStampText(ArrayOfVariants[1])) + Text000Lbl);
@@ -95,6 +102,9 @@ page 80000 "Try Generic Functions"
                             Clear(ArrayOfVariants);
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(2, VariableTypes::Text);
+                            SetParameters.SetCaption(VariableTypes::Text, 1, 'StringToProcess');
+                            SetParameters.SetCaption(VariableTypes::Text, 2, 'txtCharsToKeep');
+                            SetParameters.Caption(ArrayFunctions[4]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
                             Message(ResultLbl + GenericFunctions.KeepOnlyAllowedChar(ArrayOfVariants[1], ArrayOfVariants[2]));
@@ -123,6 +133,10 @@ page 80000 "Try Generic Functions"
                             Clear(ArrayOfVariants);
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(3, VariableTypes::Text);
+                            SetParameters.SetCaption(VariableTypes::Text, 1, 'String');
+                            SetParameters.SetCaption(VariableTypes::Text, 2, 'FindWhat');
+                            SetParameters.SetCaption(VariableTypes::Text, 3, 'ReplaceWith');
+                            SetParameters.Caption(ArrayFunctions[10]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
                             Message(ResultLbl + GenericFunctions.ReplaceString(ArrayOfVariants[1], ArrayOfVariants[2], ArrayOfVariants[3]));
@@ -140,6 +154,8 @@ page 80000 "Try Generic Functions"
                             Clear(ArrayOfVariants);
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(1, VariableTypes::Text);
+                            SetParameters.SetCaption(VariableTypes::Text, 1, 'Name');
+                            SetParameters.Caption(ArrayFunctions[11]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
                             Message(ResultLbl + GenericFunctions.ReverseString(ArrayOfVariants[1]));
@@ -157,6 +173,9 @@ page 80000 "Try Generic Functions"
                             Clear(ArrayOfVariants);
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(2, VariableTypes::Text);
+                            SetParameters.SetCaption(VariableTypes::Text, 1, 'String');
+                            SetParameters.SetCaption(VariableTypes::Text, 2, 'SubString');
+                            SetParameters.Caption(ArrayFunctions[12]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
                             Message(ResultLbl + Format(GenericFunctions.ReverseStrPos(ArrayOfVariants[1], ArrayOfVariants[2])));
@@ -186,6 +205,9 @@ page 80000 "Try Generic Functions"
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(1, VariableTypes::Integer);
                             SetParameters.SetParametersPage(1, VariableTypes::Text);
+                            SetParameters.SetCaption(VariableTypes::Integer, 1, 'FilterFieldID');
+                            SetParameters.SetCaption(VariableTypes::Text, 1, 'FilterFieldValue');
+                            SetParameters.Caption(ArrayFunctions[5]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Integer);
                             SetParameters.GetArrayOf(ArrayOfVariants2, VariableTypes::Text);
@@ -250,6 +272,10 @@ page 80000 "Try Generic Functions"
                             end;
 
                             SetParameters.SetParametersPage(3, VariableTypes::Text);
+                            SetParameters.SetCaption(VariableTypes::Text, 1, 'AttachmentsInBase64');
+                            SetParameters.SetCaption(VariableTypes::Text, 2, 'ParFileName');
+                            SetParameters.SetCaption(VariableTypes::Text, 3, 'FileType');
+                            SetParameters.Caption(ArrayFunctions[7]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
 
@@ -298,6 +324,8 @@ page 80000 "Try Generic Functions"
                             Clear(ArrayOfVariants);
                             SetParameters.InitiParameters();
                             SetParameters.SetParametersPage(1, VariableTypes::Text);
+                            SetParameters.SetCaption(VariableTypes::Text, 1, 'BarcodeString');
+                            SetParameters.Caption(ArrayFunctions[14]);
                             SetParameters.RunModal();
                             SetParameters.GetArrayOf(ArrayOfVariants, VariableTypes::Text);
                             Message(ResultLbl + Format(GenericFunctions.StringToBarcode(ArrayOfVariants[1])));

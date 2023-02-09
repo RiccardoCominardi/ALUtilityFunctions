@@ -7,6 +7,8 @@ page 80001 "Set Parameters"
     PageType = Worksheet;
     SourceTable = Integer;
     SourceTableTemporary = true;
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -14,40 +16,40 @@ page 80001 "Set Parameters"
         {
             group(Parameters)
             {
-                Caption = 'Parameters';
+                ShowCaption = false;
                 group(Dates)
                 {
                     Caption = 'Dates';
                     Visible = VisibleDateGroup;
                     field(Date1; ArrayOfDate[1])
                     {
-                        Caption = '1° Date';
                         ApplicationArea = All;
                         Visible = VisibleDate1;
+                        CaptionClass = '1,5,,' + DateCaption[1];
                     }
                     field(Date2; ArrayOfDate[2])
                     {
-                        Caption = '2° Date';
                         ApplicationArea = All;
                         Visible = VisibleDate2;
+                        CaptionClass = '1,5,,' + DateCaption[2];
                     }
                     field(Date3; ArrayOfDate[3])
                     {
-                        Caption = '3° Date';
                         ApplicationArea = All;
                         Visible = VisibleDate3;
+                        CaptionClass = '1,5,,' + DateCaption[3];
                     }
                     field(Date4; ArrayOfDate[4])
                     {
-                        Caption = '4° Date';
                         ApplicationArea = All;
                         Visible = VisibleDate4;
+                        CaptionClass = '1,5,,' + DateCaption[4];
                     }
                     field(Date5; ArrayOfDate[5])
                     {
-                        Caption = '5° Date';
                         ApplicationArea = All;
                         Visible = VisibleDate5;
+                        CaptionClass = '1,5,,' + DateCaption[5];
                     }
                 }
                 group(DateTimes)
@@ -56,33 +58,33 @@ page 80001 "Set Parameters"
                     Visible = VisibleDataTimeGroup;
                     field(DateTime1; ArrayOfDateTime[1])
                     {
-                        Caption = '1° DateTime';
                         ApplicationArea = All;
                         Visible = VisibleDateTime1;
+                        CaptionClass = '1,5,,' + DateTimeCaption[1];
                     }
                     field(DateTime2; ArrayOfDateTime[2])
                     {
-                        Caption = '2° DateTime';
                         ApplicationArea = All;
                         Visible = VisibleDateTime2;
+                        CaptionClass = '1,5,,' + DateTimeCaption[2];
                     }
                     field(DateTime3; ArrayOfDateTime[3])
                     {
-                        Caption = '3° DateTime';
                         ApplicationArea = All;
                         Visible = VisibleDateTime3;
+                        CaptionClass = '1,5,,' + DateTimeCaption[3];
                     }
                     field(DateTime4; ArrayOfDateTime[4])
                     {
-                        Caption = '4° DateTime';
                         ApplicationArea = All;
                         Visible = VisibleDateTime4;
+                        CaptionClass = '1,5,,' + DateTimeCaption[4];
                     }
                     field(DateTime5; ArrayOfDateTime[5])
                     {
-                        Caption = '5° DateTime';
                         ApplicationArea = All;
                         Visible = VisibleDateTime5;
+                        CaptionClass = '1,5,,' + DateTimeCaption[5];
                     }
                 }
                 group(String)
@@ -91,33 +93,33 @@ page 80001 "Set Parameters"
                     Visible = VisibleTextGroup;
                     field(Text1; ArrayOfText[1])
                     {
-                        Caption = '1° Text';
                         ApplicationArea = All;
                         Visible = VisibleText1;
+                        CaptionClass = '1,5,,' + TextCaption[1];
                     }
                     field(Text2; ArrayOfText[2])
                     {
-                        Caption = '2° Text';
                         ApplicationArea = All;
                         Visible = VisibleText2;
+                        CaptionClass = '1,5,,' + TextCaption[2];
                     }
                     field(Text3; ArrayOfText[3])
                     {
-                        Caption = '3° Text';
                         ApplicationArea = All;
                         Visible = VisibleText3;
+                        CaptionClass = '1,5,,' + TextCaption[3];
                     }
                     field(Text4; ArrayOfText[4])
                     {
-                        Caption = '4° Text';
                         ApplicationArea = All;
                         Visible = VisibleText4;
+                        CaptionClass = '1,5,,' + TextCaption[4];
                     }
                     field(Text5; ArrayOfText[5])
                     {
-                        Caption = '5° Text';
                         ApplicationArea = All;
                         Visible = VisibleText5;
+                        CaptionClass = '1,5,,' + TextCaption[5];
                     }
                 }
                 group(Integers)
@@ -126,33 +128,38 @@ page 80001 "Set Parameters"
                     Visible = VisibleIntegerGroup;
                     field(Integer1; ArrayOfInteger[1])
                     {
-                        Caption = '1° Integer';
+                        //Caption = '1° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger1;
+                        CaptionClass = '1,5,,' + IntegerCaption[1];
                     }
                     field(Integer2; ArrayOfInteger[2])
                     {
-                        Caption = '2° Integer';
+                        //Caption = '2° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger2;
+                        CaptionClass = '1,5,,' + IntegerCaption[2];
                     }
                     field(Integer3; ArrayOfInteger[3])
                     {
-                        Caption = '3° Integer';
+                        //Caption = '3° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger3;
+                        CaptionClass = '1,5,,' + IntegerCaption[3];
                     }
                     field(Integer4; ArrayOfInteger[4])
                     {
-                        Caption = '4° Integer';
+                        //Caption = '4° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger4;
+                        CaptionClass = '1,5,,' + IntegerCaption[4];
                     }
                     field(Integer5; ArrayOfInteger[5])
                     {
-                        Caption = '5° Integer';
+                        //Caption = '5° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger5;
+                        CaptionClass = '1,5,,' + IntegerCaption[5];
                     }
                 }
             }
@@ -176,16 +183,23 @@ page 80001 "Set Parameters"
         VisibleDateTime3 := false;
         VisibleDateTime4 := false;
         VisibleDateTime5 := false;
+        VisibleTextGroup := false;
         VisibleText1 := false;
         VisibleText2 := false;
         VisibleText3 := false;
         VisibleText4 := false;
         VisibleText5 := false;
+        VisibleIntegerGroup := false;
         VisibleInteger1 := false;
         VisibleInteger2 := false;
         VisibleInteger3 := false;
         VisibleInteger4 := false;
         VisibleInteger5 := false;
+
+        Clear(DateCaption);
+        Clear(DateTimeCaption);
+        Clear(TextCaption);
+        Clear(IntegerCaption);
     end;
     /// <summary>
     /// SetParametersPage.
@@ -369,11 +383,36 @@ page 80001 "Set Parameters"
         end;
     end;
 
+    /// <summary>
+    /// SetCaption.
+    /// </summary>
+    /// <param name="VariableTypes">Enum "Variable Types".</param>
+    /// <param name="PositionNo">Integer.</param>
+    /// <param name="CaptionValue">Text.</param>
+    procedure SetCaption(VariableTypes: Enum "Variable Types"; PositionNo: Integer; CaptionValue: Text)
+    begin
+        case VariableTypes of
+            "Variable Types"::"Date":
+                DateCaption[PositionNo] := CaptionValue;
+            "Variable Types"::"Date-Time":
+                DateTimeCaption[PositionNo] := CaptionValue;
+            "Variable Types"::"Text":
+                TextCaption[PositionNo] := CaptionValue;
+            "Variable Types"::"Integer":
+                IntegerCaption[PositionNo] := CaptionValue;
+        end;
+    end;
+
     var
         ArrayOfDate: array[5] of Date;
         ArrayOfDateTime: array[5] of DateTime;
         ArrayOfText: array[5] of Text;
         ArrayOfInteger: array[5] of Integer;
+        //Caption 
+        DateCaption: array[5] of Text;
+        DateTimeCaption: array[5] of Text;
+        TextCaption: array[5] of Text;
+        IntegerCaption: array[5] of Text;
         //Date
         VisibleDateGroup: Boolean;
         VisibleDate1: Boolean;

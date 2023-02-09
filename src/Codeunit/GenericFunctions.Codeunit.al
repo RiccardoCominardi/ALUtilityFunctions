@@ -579,7 +579,4 @@ codeunit 80000 "Generic Functions"
         exit(Result);
     end;
     #endregion Environment
-
-    var
-        myInt: Integer;
 }
