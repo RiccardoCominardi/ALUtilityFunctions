@@ -241,10 +241,11 @@ codeunit 80000 "Generic Functions"
     /// <summary>
     /// SetAttachmentsText.
     /// </summary>
-    /// <param name="PurchaseHeader">Record "Purchase Header".</param>
+    /// <param name="SourceRecord">Variant.</param>
     /// <param name="AttachmentsText">VAR Text.</param>
-    procedure SetAttachmentsText(PurchaseHeader: Record "Purchase Header"; var AttachmentsText: Text);
+    procedure SetAttachmentsText(SourceRecord: Variant; var AttachmentsText: Text);
     var
+        PurchaseHeader: Record "Purchase Header";
         DocumentAttachment: Record "Document Attachment";
         TempBlob: Codeunit "Temp Blob";
         ZipTempBlob: Codeunit "Temp Blob";
@@ -254,10 +255,17 @@ codeunit 80000 "Generic Functions"
         DocumentStream: OutStream;
         InStr: InStream;
         OuStr: OutStream;
+        RecRef: RecordRef;
     begin
         //Export document standard table "Document Attachment" into base64.
         //If the file are more than once, the document will be grouped in a zip file
         //This is an exampe with purchase orders
+        RecRef.GetTable(SourceRecord);
+        case RecRef.Number of
+            DataBase::"Purchase Header":
+                RecRef.SetTable(PurchaseHeader);
+        end;
+
         AttachmentsText := '';
 
         DocumentAttachment.Reset();
@@ -296,12 +304,13 @@ codeunit 80000 "Generic Functions"
     /// <summary>
     /// ImportAttachmentsFromBase64.
     /// </summary>
-    /// <param name="PurchaseHeader">Record "Purchase Header".</param>
+    /// <param name="SourceRecord">Variant.</param>
     /// <param name="AttachmentsInBase64">Text.</param>
     /// <param name="ParFileName">Text.</param>
     /// <param name="FileType">Text.</param>
-    procedure ImportAttachmentsFromBase64(PurchaseHeader: Record "Purchase Header"; AttachmentsInBase64: Text; ParFileName: Text; FileType: Text);
+    procedure ImportAttachmentsFromBase64(SourceRecord: Variant; AttachmentsInBase64: Text; ParFileName: Text; FileType: Text);
     var
+        PurchaseHeader: Record "Purchase Header";
         DocumentAttachment: Record "Document Attachment";
         TempCompanyInformation: Record "Company Information" temporary;
         TempBlob: Codeunit "Temp Blob";
@@ -335,6 +344,11 @@ codeunit 80000 "Generic Functions"
         ProkuriaDataLog."Base64 Attachments".CREATEOUTSTREAM(B64OutStr, TEXTENCODING::UTF8);
         B64OutStr.WRITETEXT(GlobalAttachments);
         */
+        RecRef.GetTable(SourceRecord);
+        case RecRef.Number of
+            DataBase::"Purchase Header":
+                RecRef.SetTable(PurchaseHeader);
+        end;
 
         //Download file into blob (zip or single file)
         TempCompanyInformation.CALCFIELDS(Picture); //Qualsiasi tabella con un campo blob può essere utilizzata. Serve solo per salavrsi il contenuto del Base64 convertito

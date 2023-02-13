@@ -1,16 +1,16 @@
 /// <summary>
-/// Page Try Generic Functions (ID 80000).
+/// Page Try Functions (ID 80000).
 /// </summary>
-page 80000 "Try Generic Functions"
+/*
+page 80000 "Try Functions"
 {
-    Caption = 'Try Generic Functions';
+    Caption = 'Try Functions';
     PageType = Worksheet;
     ApplicationArea = All;
     UsageCategory = Tasks;
-    SourceTable = "Company Information";
-    SourceTableTemporary = true;
+    SourceTable = Functions;
 #pragma warning disable AL0254 // TODO: - Temporary fields with limitated record
-    SourceTableView = sorting(Address);
+    SourceTableView = sorting(Category);
 #pragma warning restore AL0254 // TODO: - Temporary fields with limitated record
 
     layout
@@ -363,95 +363,6 @@ page 80000 "Try Generic Functions"
         }
     }
 
-    local procedure InitFunctionsDocumentation()
-    begin
-        Rec.Init();
-        Rec."Primary Key" := '00001';
-        Rec.Name := ArrayFunctions[1];
-        Rec.Address := '01-Dates';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00002';
-        Rec.Name := ArrayFunctions[2];
-        Rec.Address := '01-Dates';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00003';
-        Rec.Name := ArrayFunctions[3];
-        Rec.Address := '01-Dates';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00004';
-        Rec.Name := ArrayFunctions[4];
-        Rec.Address := '02-String';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00005';
-        Rec.Name := ArrayFunctions[5];
-        Rec.Address := '03-Fields';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00006';
-        Rec.Name := ArrayFunctions[6];
-        Rec.Address := '04-Files';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00007';
-        Rec.Name := ArrayFunctions[7];
-        Rec.Address := '04-Files';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00008';
-        Rec.Name := ArrayFunctions[8];
-        Rec.Address := '04-Files';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00009';
-        Rec.Name := ArrayFunctions[9];
-        Rec.Address := '02-String';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00010';
-        Rec.Name := ArrayFunctions[10];
-        Rec.Address := '02-String';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00011';
-        Rec.Name := ArrayFunctions[11];
-        Rec.Address := '02-String';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00012';
-        Rec.Name := ArrayFunctions[12];
-        Rec.Address := '02-String';
-        Rec.Insert();
-
-        Rec.Init();
-        Rec."Primary Key" := '00013';
-        Rec.Name := ArrayFunctions[13];
-        Rec.Address := '04-Files';
-        Rec.Insert();
-
-        if IsSaasEnvironment then begin
-            Rec.Init();
-            Rec."Primary Key" := '00014';
-            Rec.Name := ArrayFunctions[14];
-            Rec.Address := '04-Files';
-            Rec.Insert();
-        end;
-    end;
-
     local procedure InitFunctionsArray()
     var
         FormatDateIntoTxtLbl: Label 'FormatDateIntoTxt';
@@ -489,10 +400,9 @@ page 80000 "Try Generic Functions"
     var
         EnvironmentInformation: Codeunit "Environment Information";
     begin
+        IsSaasEnvironment := EnvironmentInformation.IsSaaSInfrastructure();
         InitFunctionsArray();
         InitFunctionsDocumentation();
-
-        IsSaasEnvironment := EnvironmentInformation.IsSaaSInfrastructure();
     end;
 
     trigger OnAfterGetRecord()
@@ -626,3 +536,4 @@ page 80000 "Try Generic Functions"
         DocFunctionRet14: Label '"EncodedText" --> Text';
         ResultLbl: Label 'Result:\';
 }
+*/

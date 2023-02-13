@@ -18,4 +18,12 @@ enum 80000 "Variable Types"
     {
         Caption = 'Integer';
     }
+    value(5; "Variant")
+    {
+        Caption = 'Variant';
+    }
+    value(6; "Boolean")
+    {
+        Caption = 'Boolean';
+    }
 }

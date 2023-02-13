@@ -9,6 +9,7 @@ page 80001 "Set Parameters"
     SourceTableTemporary = true;
     InsertAllowed = false;
     DeleteAllowed = false;
+    ModifyAllowed = false;
 
     layout
     {
@@ -17,6 +18,43 @@ page 80001 "Set Parameters"
             group(Parameters)
             {
                 ShowCaption = false;
+                group(Records)
+                {
+                    Caption = 'Records';
+                    Visible = VisibleRecordGroup;
+                    field(Record1; ArrayOfRecord[1])
+                    {
+                        ApplicationArea = All;
+                        Visible = VisibleRecord1;
+                        CaptionClass = '1,5,,' + RecordCaption[1];
+                        Editable = false;
+                    }
+                    field(Record2; ArrayOfRecord[2])
+                    {
+                        ApplicationArea = All;
+                        Visible = VisibleRecord2;
+                        CaptionClass = '1,5,,' + RecordCaption[2];
+                        Editable = false;
+                    }
+                    field(Record3; ArrayOfRecord[3])
+                    {
+                        ApplicationArea = All;
+                        Visible = VisibleRecord3;
+                        CaptionClass = '1,5,,' + RecordCaption[3];
+                    }
+                    field(Record4; ArrayOfRecord[4])
+                    {
+                        ApplicationArea = All;
+                        Visible = VisibleRecord4;
+                        CaptionClass = '1,5,,' + RecordCaption[4];
+                    }
+                    field(Record5; ArrayOfRecord[5])
+                    {
+                        ApplicationArea = All;
+                        Visible = VisibleRecord5;
+                        CaptionClass = '1,5,,' + RecordCaption[5];
+                    }
+                }
                 group(Dates)
                 {
                     Caption = 'Dates';
@@ -128,35 +166,30 @@ page 80001 "Set Parameters"
                     Visible = VisibleIntegerGroup;
                     field(Integer1; ArrayOfInteger[1])
                     {
-                        //Caption = '1° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger1;
                         CaptionClass = '1,5,,' + IntegerCaption[1];
                     }
                     field(Integer2; ArrayOfInteger[2])
                     {
-                        //Caption = '2° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger2;
                         CaptionClass = '1,5,,' + IntegerCaption[2];
                     }
                     field(Integer3; ArrayOfInteger[3])
                     {
-                        //Caption = '3° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger3;
                         CaptionClass = '1,5,,' + IntegerCaption[3];
                     }
                     field(Integer4; ArrayOfInteger[4])
                     {
-                        //Caption = '4° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger4;
                         CaptionClass = '1,5,,' + IntegerCaption[4];
                     }
                     field(Integer5; ArrayOfInteger[5])
                     {
-                        //Caption = '5° Integer';
                         ApplicationArea = All;
                         Visible = VisibleInteger5;
                         CaptionClass = '1,5,,' + IntegerCaption[5];
@@ -177,24 +210,39 @@ page 80001 "Set Parameters"
         VisibleDate3 := false;
         VisibleDate4 := false;
         VisibleDate5 := false;
+        DateCounter := 0;
+
         VisibleDataTimeGroup := false;
         VisibleDateTime1 := false;
         VisibleDateTime2 := false;
         VisibleDateTime3 := false;
         VisibleDateTime4 := false;
         VisibleDateTime5 := false;
+        DateTimeCounter := 0;
+
         VisibleTextGroup := false;
         VisibleText1 := false;
         VisibleText2 := false;
         VisibleText3 := false;
         VisibleText4 := false;
         VisibleText5 := false;
+        TextCounter := 0;
+
         VisibleIntegerGroup := false;
         VisibleInteger1 := false;
         VisibleInteger2 := false;
         VisibleInteger3 := false;
         VisibleInteger4 := false;
         VisibleInteger5 := false;
+        IntegerCounter := 0;
+
+        VisibleRecordGroup := false;
+        VisibleRecord1 := false;
+        VisibleRecord2 := false;
+        VisibleRecord3 := false;
+        VisibleRecord4 := false;
+        VisibleRecord5 := false;
+        RecordCounter := 0;
 
         Clear(DateCaption);
         Clear(DateTimeCaption);
@@ -202,21 +250,11 @@ page 80001 "Set Parameters"
         Clear(IntegerCaption);
     end;
     /// <summary>
-    /// SetParametersPage.
+    /// SetVisibleParameters.
     /// </summary>
-    /// <param name="NoOfParameters">Integer.</param>
     /// <param name="VariableTypes">Enum "Variable Types".</param>
-    procedure SetParametersPage(NoOfParameters: Integer; VariableTypes: Enum "Variable Types")
-    var
-        Text000Err: Label 'Insert at least 1 parameter';
-        Text001Err: Label 'This version of app can process at most %1 parameters';
+    procedure SetVisibleParameters(VariableTypes: Enum "Variable Types")
     begin
-        if NoOfParameters <= 0 then
-            Error(Text000Err);
-
-        if NoOfParameters > 5 then
-            Error(Text001Err, 5);
-
         //Visibilità del gruppo
         case VariableTypes of
             "Variable Types"::"Date":
@@ -227,133 +265,91 @@ page 80001 "Set Parameters"
                 VisibleTextGroup := true;
             "Variable Types"::"Integer":
                 VisibleIntegerGroup := true;
+            VariableTypes::"Variant":
+                VisibleRecordGroup := true;
         end;
 
         //Visibilità del singolo campo
         case VariableTypes of
             "Variable Types"::Date:
-                case NoOfParameters of
-                    1:
-                        VisibleDate1 := true;
-                    2:
-                        begin
+                begin
+                    DateCounter += 1;
+                    case DateCounter of
+                        1:
                             VisibleDate1 := true;
+                        2:
                             VisibleDate2 := true;
-                        end;
-                    3:
-                        begin
-                            VisibleDate1 := true;
-                            VisibleDate2 := true;
+                        3:
                             VisibleDate3 := true;
-                        end;
-                    4:
-                        begin
-                            VisibleDate1 := true;
-                            VisibleDate2 := true;
-                            VisibleDate3 := true;
+                        4:
                             VisibleDate4 := true;
-                        end;
-                    5:
-                        begin
-                            VisibleDate1 := true;
-                            VisibleDate2 := true;
-                            VisibleDate3 := true;
-                            VisibleDate4 := true;
+                        5:
                             VisibleDate5 := true;
-                        end;
+                    end;
                 end;
             "Variable Types"::"Date-Time":
-                case NoOfParameters of
-                    1:
-                        VisibleDateTime1 := true;
-                    2:
-                        begin
+                begin
+                    DateTimeCounter += 1;
+                    case DateTimeCounter of
+                        1:
                             VisibleDateTime1 := true;
+                        2:
                             VisibleDateTime2 := true;
-                        end;
-                    3:
-                        begin
-                            VisibleDateTime1 := true;
-                            VisibleDateTime2 := true;
+                        3:
                             VisibleDateTime3 := true;
-                        end;
-                    4:
-                        begin
-                            VisibleDateTime1 := true;
-                            VisibleDateTime2 := true;
-                            VisibleDateTime3 := true;
+                        4:
                             VisibleDateTime4 := true;
-                        end;
-                    5:
-                        begin
-                            VisibleDateTime1 := true;
-                            VisibleDateTime2 := true;
-                            VisibleDateTime3 := true;
-                            VisibleDateTime4 := true;
+                        5:
                             VisibleDateTime5 := true;
-                        end;
+                    end;
                 end;
             "Variable Types"::Text:
-                case NoOfParameters of
-                    1:
-                        VisibleText1 := true;
-                    2:
-                        begin
+                begin
+                    TextCounter += 1;
+                    case TextCounter of
+                        1:
                             VisibleText1 := true;
+                        2:
                             VisibleText2 := true;
-                        end;
-                    3:
-                        begin
-                            VisibleText1 := true;
-                            VisibleText2 := true;
+                        3:
                             VisibleText3 := true;
-                        end;
-                    4:
-                        begin
-                            VisibleText1 := true;
-                            VisibleText2 := true;
-                            VisibleText3 := true;
+                        4:
                             VisibleText4 := true;
-                        end;
-                    5:
-                        begin
-                            VisibleText1 := true;
-                            VisibleText2 := true;
-                            VisibleText3 := true;
-                            VisibleText4 := true;
+                        5:
                             VisibleText5 := true;
-                        end;
+                    end;
                 end;
             "Variable Types"::Integer:
-                case NoOfParameters of
-                    1:
-                        VisibleInteger1 := true;
-                    2:
-                        begin
+                begin
+                    IntegerCounter += 1;
+                    case IntegerCounter of
+                        1:
                             VisibleInteger1 := true;
+                        2:
                             VisibleInteger2 := true;
-                        end;
-                    3:
-                        begin
-                            VisibleInteger1 := true;
-                            VisibleInteger2 := true;
+                        3:
                             VisibleInteger3 := true;
-                        end;
-                    4:
-                        begin
-                            VisibleInteger1 := true;
-                            VisibleInteger2 := true;
-                            VisibleInteger3 := true;
+                        4:
                             VisibleInteger4 := true;
-                        end;
-                    5:
-                        begin
-                            VisibleInteger1 := true;
-                            VisibleInteger2 := true;
-                            VisibleInteger3 := true;
-                            VisibleInteger4 := true;
+                        5:
                             VisibleInteger5 := true;
-                        end;
+                    end;
+                end;
+            "Variable Types"::"Variant":
+                begin
+                    RecordCounter += 1;
+                    case RecordCounter of
+                        1:
+                            VisibleRecord1 := true;
+                        2:
+                            VisibleRecord2 := true;
+                        3:
+                            VisibleRecord3 := true;
+                        4:
+                            VisibleRecord4 := true;
+                        5:
+                            VisibleRecord5 := true;
+                    end;
                 end;
         end;
     end;
@@ -380,6 +376,7 @@ page 80001 "Set Parameters"
             "Variable Types"::"Integer":
                 for i := 1 to 5 do
                     ArrayOfVariant[i] := ArrayOfInteger[i];
+        //Array of Record is not editable so is not return. 
         end;
     end;
 
@@ -387,20 +384,30 @@ page 80001 "Set Parameters"
     /// SetCaption.
     /// </summary>
     /// <param name="VariableTypes">Enum "Variable Types".</param>
-    /// <param name="PositionNo">Integer.</param>
     /// <param name="CaptionValue">Text.</param>
-    procedure SetCaption(VariableTypes: Enum "Variable Types"; PositionNo: Integer; CaptionValue: Text)
+    procedure SetCaption(VariableTypes: Enum "Variable Types"; CaptionValue: Text)
     begin
         case VariableTypes of
             "Variable Types"::"Date":
-                DateCaption[PositionNo] := CaptionValue;
+                DateCaption[DateCounter] := CaptionValue;
             "Variable Types"::"Date-Time":
-                DateTimeCaption[PositionNo] := CaptionValue;
+                DateTimeCaption[DateTimeCounter] := CaptionValue;
             "Variable Types"::"Text":
-                TextCaption[PositionNo] := CaptionValue;
+                TextCaption[TextCounter] := CaptionValue;
             "Variable Types"::"Integer":
-                IntegerCaption[PositionNo] := CaptionValue;
+                IntegerCaption[IntegerCounter] := CaptionValue;
+            "Variable Types"::"Variant":
+                RecordCaption[RecordCounter] := CaptionValue;
         end;
+    end;
+
+    /// <summary>
+    /// SetRecordID.
+    /// </summary>
+    /// <param name="ParRecordID">RecordId.</param>
+    procedure SetRecordID(ParRecordID: RecordId)
+    begin
+        ArrayOfRecord[RecordCounter] := Format(ParRecordID);
     end;
 
     var
@@ -408,11 +415,13 @@ page 80001 "Set Parameters"
         ArrayOfDateTime: array[5] of DateTime;
         ArrayOfText: array[5] of Text;
         ArrayOfInteger: array[5] of Integer;
+        ArrayOfRecord: array[5] of Text; //Format of a RecordID record
         //Caption 
         DateCaption: array[5] of Text;
         DateTimeCaption: array[5] of Text;
         TextCaption: array[5] of Text;
         IntegerCaption: array[5] of Text;
+        RecordCaption: array[5] of Text;
         //Date
         VisibleDateGroup: Boolean;
         VisibleDate1: Boolean;
@@ -420,6 +429,7 @@ page 80001 "Set Parameters"
         VisibleDate3: Boolean;
         VisibleDate4: Boolean;
         VisibleDate5: Boolean;
+        DateCounter: Integer;
         //DateTime
         VisibleDataTimeGroup: Boolean;
         VisibleDateTime1: Boolean;
@@ -427,6 +437,7 @@ page 80001 "Set Parameters"
         VisibleDateTime3: Boolean;
         VisibleDateTime4: Boolean;
         VisibleDateTime5: Boolean;
+        DateTimeCounter: Integer;
         //Boolean
         VisibleTextGroup: Boolean;
         VisibleText1: Boolean;
@@ -434,6 +445,7 @@ page 80001 "Set Parameters"
         VisibleText3: Boolean;
         VisibleText4: Boolean;
         VisibleText5: Boolean;
+        TextCounter: Integer;
         //Integer
         VisibleIntegerGroup: Boolean;
         VisibleInteger1: Boolean;
@@ -441,5 +453,13 @@ page 80001 "Set Parameters"
         VisibleInteger3: Boolean;
         VisibleInteger4: Boolean;
         VisibleInteger5: Boolean;
-
+        IntegerCounter: Integer;
+        //Record
+        VisibleRecordGroup: Boolean;
+        VisibleRecord1: Boolean;
+        VisibleRecord2: Boolean;
+        VisibleRecord3: Boolean;
+        VisibleRecord4: Boolean;
+        VisibleRecord5: Boolean;
+        RecordCounter: Integer;
 }
