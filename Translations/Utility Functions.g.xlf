@@ -138,45 +138,45 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control String - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2712912632 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Try Functions 2</source>
+        <trans-unit id="Page 1653235338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Try Functions</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions 2 - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2712912632 - Method 2357179746 - NamedType 3691381949" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 3691381949" size-unit="char" translate="yes" xml:space="preserve">
           <source>Result:\</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions 2 - Method ExecuteFunctions - NamedType ResultLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType ResultLbl</note>
         </trans-unit>
-        <trans-unit id="Page 2712912632 - Method 2357179746 - NamedType 1327832897" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 1327832897" size-unit="char" translate="yes" xml:space="preserve">
           <source>\Go to sites https://www.epochconverter.com/ to see the result</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions 2 - Method ExecuteFunctions - NamedType Text000Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text000Lbl</note>
         </trans-unit>
-        <trans-unit id="Page 2712912632 - Method 2357179746 - NamedType 1196336482" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 1196336482" size-unit="char" translate="yes" xml:space="preserve">
           <source>Excel Exported</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions 2 - Method ExecuteFunctions - NamedType Text001Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text001Lbl</note>
         </trans-unit>
-        <trans-unit id="Page 2712912632 - Method 2357179746 - NamedType 1753513791" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 1753513791" size-unit="char" translate="yes" xml:space="preserve">
           <source>Go to %1 and take a look at the attachments factbox</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions 2 - Method ExecuteFunctions - NamedType Text002Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text002Lbl</note>
         </trans-unit>
-        <trans-unit id="Page 2712912632 - Method 2357179746 - NamedType 3779895200" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 3779895200" size-unit="char" translate="yes" xml:space="preserve">
           <source>Attachments Imported</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions 2 - Method ExecuteFunctions - NamedType Text003Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text003Lbl</note>
         </trans-unit>
-        <trans-unit id="Page 2712912632 - Method 2357179746 - NamedType 3140410629" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 3140410629" size-unit="char" translate="yes" xml:space="preserve">
           <source>\Go to sites https://base64.guru/converter/decode/file to see the result</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions 2 - Method ExecuteFunctions - NamedType Text004Lbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text004Lbl</note>
         </trans-unit>
-        <trans-unit id="Page 2712912632 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1653235338 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Functions</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions 2 - Control Functions - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Control Functions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 113145658 - EnumValue 1470304999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Date Functions</source>

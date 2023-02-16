@@ -1,3 +1,6 @@
+/// <summary>
+/// Enum Categories (ID 80001).
+/// </summary>
 enum 80001 Categories
 {
     Extensible = true;

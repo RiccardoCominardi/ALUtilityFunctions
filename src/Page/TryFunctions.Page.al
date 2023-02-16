@@ -83,7 +83,12 @@ page 80000 "Try Functions"
         Text002Lbl: Label 'Go to %1 and take a look at the attachments factbox';
         Text003Lbl: Label 'Attachments Imported';
         Text004Lbl: Label '\Go to sites https://base64.guru/converter/decode/file to see the result';
+        IsHandled: Boolean;
     begin
+        OnBeforeExecuteFunctions(IsHandled, FunctionName);
+        if IsHandled then
+            exit;
+
         case FunctionName of
             'DiffInMonthBetween2Dates':
                 begin
@@ -165,6 +170,10 @@ page 80000 "Try Functions"
                 end;
         end;
 
+        OnBeforeShowResult(IsHandled, ResultText);
+        if IsHandled then
+            exit;
+
         if ResultText <> '' then
             Message(ResultLbl + ResultText);
     end;
@@ -214,6 +223,17 @@ page 80000 "Try Functions"
         exit(Format(RecRef.RecordId));
     end;
 
+    #region Events
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeExecuteFunctions(var IsHandled: Boolean; FunctionName: Text[50])
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeShowResult(var IsHandled: Boolean; ResultText: Text)
+    begin
+    end;
+    #endregion Events
     var
         VariableTypesNoFld: Enum "Variable Types";
         GenericFunctions: Codeunit "Generic Functions";

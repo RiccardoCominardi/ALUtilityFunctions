@@ -42,6 +42,8 @@ table 80000 Functions
         }
     }
 
+    #region Functions
+
     /// <summary>
     /// LoadFunctions.
     /// </summary>
@@ -54,8 +56,13 @@ table 80000 Functions
         VariableTypes: Enum "Variable Types";
         Types: Enum Types;
         NewRecordID: RecordID;
+        IsHandled: Boolean;
     begin
         //Rigenero ogni volta le funzioni
+        OnBeforeLoadFunctions(IsHandled);
+        if IsHandled then
+            exit;
+
         Functions.Reset();
         Functions.DeleteAll(true);
         Clear(NewRecordID);
@@ -122,13 +129,26 @@ table 80000 Functions
             CreateParameter('StringToBarcode', Types::Parameter, 'BarcodeString', VariableTypes::Text, '', NewRecordID);
             CreateParameter('StringToBarcode', Types::"Return Value", 'EncodedText', VariableTypes::Text, '', NewRecordID);
         end;
+
+        OnAfterLoadFunctions();
     end;
 
-    local procedure SetFixedRecordID(TableID: Integer): RecordId
+    /// <summary>
+    /// SetFixedRecordID.
+    /// </summary>
+    /// <param name="TableID">Integer.</param>
+    /// <returns>Return value of type RecordId.</returns>
+    procedure SetFixedRecordID(TableID: Integer): RecordId
     var
         Customer: Record Customer;
         PurchaseHeader: Record "Purchase Header";
+        CustomRecordID: RecordId;
+        IsHandled: Boolean;
     begin
+        OnBeforeSetRecordID(TableID, CustomRecordID, IsHandled);
+        if IsHandled then
+            exit(CustomRecordID);
+
         case TableID of
             DataBase::Customer:
                 begin
@@ -220,6 +240,26 @@ table 80000 Functions
                     Error(Text001Err, FunctionName);
         end;
     end;
+    #endregion Functions
+
+    #region Events
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeLoadFunctions(var IsHanlded: Boolean)
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnAfterLoadFunctions()
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnBeforeSetRecordID(TableID: Integer; var ParRecordID: RecordId; var IsHandled: Boolean)
+    begin
+    end;
+
+    #endregion Events
 
     trigger OnInsert()
     begin

@@ -1,3 +1,6 @@
+/// <summary>
+/// Enum Variable Types (ID 80000).
+/// </summary>
 enum 80000 "Variable Types"
 {
     Extensible = true;
