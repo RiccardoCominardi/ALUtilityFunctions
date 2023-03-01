@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Utility Functions">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Functions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1929393835 - Method 3623827377 - NamedType 4204058380" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Can be managed at most 5 parameters for function.\Error in function: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Method CheckCorrectFunctionStructure - NamedType Text000Err</note>
+        </trans-unit>
+        <trans-unit id="Table 1929393835 - Method 3623827377 - NamedType 2316870939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Function can have at most 1 return value.\Error in function: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Method CheckCorrectFunctionStructure - NamedType Text001Err</note>
+        </trans-unit>
+        <trans-unit id="Table 1929393835 - Method 3529293594 - NamedType 4204058380" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Already exist a function with name %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Method CreateFunction - NamedType Text000Err</note>
+        </trans-unit>
+        <trans-unit id="Table 1929393835 - Method 804474859 - NamedType 4204058380" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rename is not allowed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Method OnRename - NamedType Text000Err</note>
+        </trans-unit>
+        <trans-unit id="Table 1929393835 - Field 3702373668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Category</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Field Category - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1929393835 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1929393835 - Field 684242166 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parameters</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Field Parameters - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1929393835 - Field 3599159403 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions - Field Return Value - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1268423661 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions Details - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1268423661 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions Details - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1268423661 - Field 971044367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Function Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions Details - Field Function Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1268423661 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions Details - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1268423661 - Field 2897660500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions Details - Field Record ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1268423661 - Field 1878130204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Types</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions Details - Field Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1268423661 - Field 317722666 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variable Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Functions Details - Field Variable Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 149480732 - Method 951961053 - NamedType 2156366782" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This environment is Saas</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method CheckEnvironment - NamedType SaasLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 149480732 - Method 951961053 - NamedType 2399819897" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This environment is not Saas</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method CheckEnvironment - NamedType NotSaasLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 149480732 - Method 2857238821 - NamedType 3417773150" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sheet1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method ExportExcel - NamedType SheetNameLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 149480732 - Method 3091011118 - NamedType 2182284056" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select ZIP File</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method ImportAttachmentsFromZip - NamedType SelectZIPFileMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 149480732 - Method 3091011118 - NamedType 1340024188" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer %1 does not exist.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method ImportAttachmentsFromZip - NamedType NoCustError</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 149480732 - Method 3091011118 - NamedType 3907048935" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 attachments Imported successfully.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Generic Functions - Method ImportAttachmentsFromZip - NamedType ImportedMsg</note>
+        </trans-unit>
+        <trans-unit id="Page 3192193756 - Control 1826403361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dates</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Dates - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3192193756 - Control 3832747598 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date - Time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control DateTimes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3192193756 - Control 2295892487 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Integer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Integers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3192193756 - Control 14793010 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Records</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control Records - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3192193756 - Control 1736694239 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>String</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Set Parameters - Control String - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1653235338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Try Functions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 3691381949" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Result:\</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType ResultLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 1327832897" size-unit="char" translate="yes" xml:space="preserve">
+          <source>\Go to sites https://www.epochconverter.com/ to see the result</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text000Lbl</note>
+        </trans-unit>
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 1196336482" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel Exported</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text001Lbl</note>
+        </trans-unit>
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 1753513791" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Go to %1 and take a look at the attachments factbox</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text002Lbl</note>
+        </trans-unit>
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 3779895200" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attachments Imported</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text003Lbl</note>
+        </trans-unit>
+        <trans-unit id="Page 1653235338 - Method 2357179746 - NamedType 3140410629" size-unit="char" translate="yes" xml:space="preserve">
+          <source>\Go to sites https://base64.guru/converter/decode/file to see the result</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Method ExecuteFunctions - NamedType Text004Lbl</note>
+        </trans-unit>
+        <trans-unit id="Page 1653235338 - Control 1929393835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Functions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Try Functions - Control Functions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 113145658 - EnumValue 1470304999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date Functions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Categories - EnumValue DateFunctions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 113145658 - EnumValue 1317552199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Environment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Categories - EnumValue Environment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 113145658 - EnumValue 4075648627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field Management</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Categories - EnumValue FieldManagement - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 113145658 - EnumValue 686348159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Management</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Categories - EnumValue FileManagement - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 113145658 - EnumValue 492225120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>String Functions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Categories - EnumValue StringFunctions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2388510493 - EnumValue 75106347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parameter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Types - EnumValue Parameter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2388510493 - EnumValue 3599159403 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Return Value</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Types - EnumValue Return Value - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1559274519 - EnumValue 617522584 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Boolean</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Variable Types - EnumValue Boolean - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1559274519 - EnumValue 3192175264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Variable Types - EnumValue Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1559274519 - EnumValue 2206507320 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date-Time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Variable Types - EnumValue Date-Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1559274519 - EnumValue 3883182266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Integer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Variable Types - EnumValue Integer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1559274519 - EnumValue 1821279055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Variable Types - EnumValue Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1559274519 - EnumValue 112710097 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Variable Types - EnumValue Variant - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
